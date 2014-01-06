@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
+ * Copyright (C) 2008-2014 TrinityCore <http://www.trinitycore.org/>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -275,7 +275,11 @@ public:
 
         uint32 db_guid = creature->GetDBTableGUIDLow();
 
-        // To call _LoadGoods(); _LoadQuests(); CreateTrainerSpells();
+        // To call _LoadGoods(); _LoadQuests(); CreateTrainerSpells()
+        // current "creature" variable is deleted and created fresh new, otherwise old values might trigger asserts or cause undefined behavior
+        creature->CleanupsBeforeDelete();
+        delete creature;
+        creature = new Creature();
         if (!creature->LoadCreatureFromDB(db_guid, map))
         {
             delete creature;

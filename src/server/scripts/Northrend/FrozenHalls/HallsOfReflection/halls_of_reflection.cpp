@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
+ * Copyright (C) 2008-2014 TrinityCore <http://www.trinitycore.org/>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -1377,7 +1377,7 @@ public:
 
         void EnterEvadeMode() OVERRIDE
         {
-            if (!me->GetOwner()->HasAura(AURA_HALLUCINATION))
+            if (me->GetOwner() && !me->GetOwner()->HasAura(AURA_HALLUCINATION))
                 npc_phantom_mage::npc_phantom_mageAI::EnterEvadeMode();
         }
 

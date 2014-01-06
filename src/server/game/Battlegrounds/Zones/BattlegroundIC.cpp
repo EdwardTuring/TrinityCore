@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
+ * Copyright (C) 2008-2014 TrinityCore <http://www.trinitycore.org/>
  * Copyright (C) 2005-2009 MaNGOS <http://getmangos.com/>
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -396,6 +396,9 @@ bool BattlegroundIC::SetupBattleground()
         TC_LOG_ERROR("bg.battleground", "Isle of Conquest: There was an error creating gunships!");
         return false;
     }
+
+    gunshipHorde->EnableMovement(false);
+    gunshipAlliance->EnableMovement(false);
 
     // setting correct factions for Keep Cannons
     for (uint8 i = BG_IC_NPC_KEEP_CANNON_1; i < BG_IC_NPC_KEEP_CANNON_12; ++i)
