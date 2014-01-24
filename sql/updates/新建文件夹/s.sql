@@ -1,260 +1,207 @@
-UPDATE `creature_template` SET `dmg_multiplier`=7.5 WHERE `entry` IN (32386,32358,32377,32398,32409,32400,32417,32429,32438,32422,32357,32471,32481,32475,32447,32495,32501);
+UPDATE `creature_template` SET `spell1`=66518, `spell2`=0 WHERE `entry`=34929; -- Alliance Gunship Cannon
+UPDATE `creature_template` SET `spell1`=66218, `spell2`=66296, `spell8`=0, `unit_flags`=16384, `speed_walk`=2.8, `speed_run`=3.642857 WHERE `entry`=34793; -- Catapult
+UPDATE `creature_template` SET `spell1`=66218, `spell2`=66296, `unit_flags`=16384, `speed_walk`=2.8, `speed_run`=3.642857 WHERE `entry`=35413; -- Catapult (1)             
+UPDATE `creature_template` SET `spell1`=67440, `spell2`=67441, `unit_flags`=16384 WHERE `entry`=34775; -- Demolisher
+UPDATE `creature_template` SET `spell1`=68068, `spell2`=67442, `unit_flags`=16384 WHERE `entry`=35415; -- Demolisher (1)           
+UPDATE `creature_template` SET `spell1`=66456, `spell2`=67195, `faction_A`=1732, `faction_H`=1732, `unit_flags`=16384 WHERE `entry`=34802; -- Glaive Thrower (A)
+UPDATE `creature_template` SET `spell1`=67034, `spell2`=67195, `faction_A`=1735, `faction_H`=1735, `unit_flags`=16384 WHERE `entry`=35273; -- Glaive Thrower (H)
+UPDATE `creature_template` SET `spell1`=68826, `spell2`=69515, `faction_A`=1735, `faction_H`=1735, `unit_flags`=16384, `minlevel`=80, `maxlevel`=80, `speed_walk`=3.2, `speed_run`=1.14286 WHERE `entry`=35421; -- Glaive Thrower (1) (H)
+UPDATE `creature_template` SET `spell1`=68827, `spell2`=69515, `faction_A`=1732, `faction_H`=1732, `unit_flags`=16384 WHERE `entry`=35419; -- Glaive Thrower (1) (A)
+UPDATE `creature_template` SET `spell1`=66529, `spell2`=0 WHERE `entry`=34935; -- Horde Gunship Cannon
+UPDATE `creature_template` SET `spell1`=67452, `spell2`=66541, `unit_flags`=16384 WHERE `entry`=34944; -- Keep Cannon -- sniff
+UPDATE `creature_template` SET `spell1`=68170, `spell2`=68169, `unit_flags`=16384 WHERE `entry`=35429; -- Keep Cannon (1)          
+UPDATE `creature_template` SET `spell1`=67796, `spell2`=67797, `faction_A`=1735, `faction_H`=1735, `unit_flags`=16640 WHERE `entry`=35069; -- Siege Engine (H)
+UPDATE `creature_template` SET `spell1`=67796, `spell2`=67797, `faction_A`=1732, `faction_H`=1732, `unit_flags`=16640 WHERE `entry`=34776; -- Siege Engine (A)
+UPDATE `creature_template` SET `spell1`=67816, `spell2`=69502, `faction_A`=1735, `faction_H`=1735, `unit_flags`=16640, `speed_walk`=1.2, `speed_run`=1 WHERE `entry`=35433; -- Siege Engine (1) (H)
+UPDATE `creature_template` SET `spell1`=67816, `spell2`=69502, `faction_A`=1732, `faction_H`=1732, `unit_flags`=16640 WHERE `entry`=35431; -- Siege Engine (1) (A)
 
-UPDATE `creature_template` SET `dmg_multiplier`=13 WHERE `entry` IN (31673,31674);
+UPDATE `creature_template` SET `minlevel`=70, `maxlevel`=70, `spell1`=66186, `faction_A`=1732, `faction_H`=1732, `unit_flags`=16384, `VehicleId`=436 WHERE `entry`=34778; -- Flame Turret (A)
+UPDATE `creature_template` SET `minlevel`=70, `maxlevel`=70, `spell1`=66186, `faction_A`=1735, `faction_H`=1735, `unit_flags`=16384 WHERE `entry`=36356; -- Flame Turret (H)
+UPDATE `creature_template` SET `minlevel`=80, `maxlevel`=80, `spell1`=68832, `faction_A`=1732, `faction_H`=1732, `unit_flags`=16384 WHERE `entry`=35417; -- Flame Turret (1) (A)
+UPDATE `creature_template` SET `minlevel`=80, `maxlevel`=80, `spell1`=68832, `faction_A`=1735, `faction_H`=1735, `unit_flags`=16384 WHERE `entry`=36358; -- Flame Turret (1) (H)
 
-UPDATE `creature_template` SET `exp`=2 WHERE `entry` IN (35543,35521,35539,35306,35541,35530,40420,31539,34918,35407,40424,40418,35529,35524,35537,35520,31540,35533,35401,35310,35308,35522,35538,35527,35534,35528,35542,35536,35535,35525,35519,35531,40422);
+UPDATE `creature_template` SET `difficulty_entry_1`=35417 WHERE `entry`=34778; -- Flame Turret (A)
+UPDATE `creature_template` SET `difficulty_entry_1`=36358 WHERE `entry`=36356; -- Flame Turret (H)
 
-UPDATE `creature_template` SET `faction_A`=1921, `faction_H`=1921 WHERE `entry`=25335;
-UPDATE `creature_template` SET `faction_A`=1978, `faction_H`=1978 WHERE `entry`=25338;
-UPDATE `creature_template` SET `faction_A`=1982, `faction_H`=1982 WHERE `entry`=25451;
-UPDATE `creature_template` SET `faction_A`=634, `faction_H`=634 WHERE `entry`=26093;
-UPDATE `creature_template` SET `faction_A`=29, `faction_H`=29 WHERE `entry` IN (26537,26539);
-UPDATE `creature_template` SET `faction_A`=35, `faction_H`=35 WHERE `entry`=27135;
-UPDATE `creature_template` SET `faction_A`=974, `faction_H`=974 WHERE `entry`=27860;
-UPDATE `creature_template` SET `faction_A`=11, `faction_H`=11 WHERE `entry` IN (29292,29293,29294,29295);
-UPDATE `creature_template` SET `faction_A`=21, `faction_H`=21 WHERE `entry`=32263;
-UPDATE `creature_template` SET `faction_A`=16, `faction_H`=16 WHERE `entry`=32487;
-UPDATE `creature_template` SET `faction_A`=14, `faction_H`=14 WHERE `entry`=33785;
-UPDATE `creature_template` SET `faction_A`=68, `faction_H`=68 WHERE `entry`=33996;
-UPDATE `creature_template` SET `faction_A`=1771, `faction_H`=1771 WHERE `entry` IN (37069,37549,36940,37550,36941,37551);
-UPDATE `creature_template` SET `minlevel`=82,`maxlevel`=82, exp=2, `faction_A`=16, `faction_H`=16, `dmg_multiplier`=7.5, `baseattacktime`=2000, `rangeattacktime`=2000, `dynamicflags`=0, `mechanic_immune_mask`=8388624, `ScriptName`='npc_memory' WHERE `entry` IN (
-35052,35041,35033,35046,35043,35047,35044,35039,35034,35049,35030,34942,35050,35042,35045,35037,35031,35038,35029,35048,35032,35028,35040,35036,35051);
+UPDATE `creature_template` SET `minlevel`=70, `maxlevel`=70, `spell1`=66203, `spell2`=67461, `faction_A`=1732, `faction_H`=1732, `unit_flags`=16384, `VehicleId`=436 WHERE `entry`=34777; -- Siege Turret (A)
+UPDATE `creature_template` SET `minlevel`=70, `maxlevel`=70, `spell1`=66203, `spell2`=67461, `faction_A`=1735, `faction_H`=1735, `unit_flags`=16384 WHERE `entry`=36355; -- Siege Turret (H)
+UPDATE `creature_template` SET `minlevel`=80, `maxlevel`=80, `spell1`=67462, `spell2`=69505, `faction_A`=1732, `faction_H`=1732, `unit_flags`=16384 WHERE `entry`=35436; -- Siege Turret (1) (A)
+UPDATE `creature_template` SET `minlevel`=80, `maxlevel`=80, `spell1`=67462, `spell2`=69505, `faction_A`=1735, `faction_H`=1735, `unit_flags`=16384 WHERE `entry`=36357; -- Siege Turret (1) (H)
 
-UPDATE `creature_template` SET `minlevel`=82,`maxlevel`=82, exp=2, `faction_A`=16, `faction_H`=16, `dmg_multiplier`=13, `baseattacktime`=2000, `rangeattacktime`=2000, `dynamicflags`=0, `mechanic_immune_mask`=8388624 WHERE `entry` IN (
-35519,35520,35521,35522,35523,35524,35525,35527,35528,35529,35530,35531,35532,35533,35534,35535,35536,35537,35538,35539,35540,35541,35542,35543,35544);
+UPDATE `creature_template` SET `difficulty_entry_1`=35436 WHERE `entry`=34777; -- Siege Turret (A)
+UPDATE `creature_template` SET `difficulty_entry_1`=36357 WHERE `entry`=36355; -- Siege Turret (H)
 
-UPDATE `creature_template` SET `minlevel`=80, `maxlevel`=80, `faction_A`=16, `faction_H`=16, `baseattacktime`=2000, `rangeattacktime`=2000, `unit_flags`=32832, `dynamicflags`=0 WHERE `entry` IN (35305,35306,35307,35308,35309,35310);
-UPDATE `creature_template` SET `dmg_multiplier`=13 WHERE `entry` IN (35306,35308,35310);
+UPDATE `creature_template` SET `speed_walk`=1.2, `speed_run`=1.142857 WHERE `entry` IN (34778,36356,35417,36358,34777,36355,35436,36357);
 
-UPDATE `creature_template` SET `exp`=2 WHERE `entry` IN (37531,38139,37532,38151);
-UPDATE `creature_template` SET `unit_flags`=33685504, `rangeattacktime`=2000, `spell1`=0 WHERE `entry` IN (16363,29379);
+UPDATE `creature_template` SET `npcflag`=16777216, `baseattacktime`=2000, `rangeattacktime`=2000, `mechanic_immune_mask`=344276858 WHERE `entry` IN (34929,34793,35413,34775,35415,34802,35273,35421,35419,34935,34944,35429,35069,34776,35433,35431,34778,36356,35417,36358,34777,36355,35436,36357);
 
-UPDATE `creature_template` SET `minlevel`=60, `maxlevel`=60, `faction_A`=14, `faction_H`=14, `unit_flags`=33947648, `baseattacktime`=2000, `rangeattacktime`=2000, `spell1`=0, `InhabitType`=4, `flags_extra`=128 WHERE `entry` IN (17662,18602);
-UPDATE `creature_template` SET `ScriptName`='npc_broggok_poison_cloud' WHERE `entry`=17662;
+DELETE FROM `vehicle_template_accessory` WHERE `entry` IN (34776,35069);
+INSERT INTO `vehicle_template_accessory` (`entry`,`accessory_entry`,`seat_id`,`minion`,`description`,`summontype`,`summontimer`) VALUES
+(34776,34778,1,1,'Siege Engine - Flame Turret',6,30000),
+(34776,34778,2,1,'Siege Engine - Flame Turret',6,30000),
+(34776,34777,7,1,'Siege Engine - Siege Turret',6,30000),
+(35069,36356,1,1,'Siege Engine - Flame Turret',6,30000),
+(35069,36356,2,1,'Siege Engine - Flame Turret',6,30000),
+(35069,36355,7,1,'Siege Engine - Siege Turret',6,30000);
 
-DELETE FROM `spelldifficulty_dbc` WHERE `spellid0` IN (28157,28158,30913,30917,30914);
-INSERT INTO `spelldifficulty_dbc` (`id`, `spellid0`, `spellid1`, `spellid2`, `spellid3`) VALUES
-(28157,28157,54364,0,0),
-(28158,28158,54362,0,0),
-(30913,30913,38458,0,0),
-(30917,30917,38459,0,0),
-(30914,30914,38462,0,0);
+DELETE FROM `npc_spellclick_spells` WHERE `npc_entry` IN (34929,34793,35413,34775,35415,34802,35273,35421,35419,34935,34944,35429,35069,34776,35433,35431,34778,36356,35417,36358,34777,36355,35436,36357);
+INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `user_type`) VALUES
+(34775,66245,1,0),
+(34776,66245,1,0),
+(34776,46598,1,0), -- accessorys
+(34777,66245,1,0),
+(34778,66245,1,0),
+(34793,66245,1,0),
+(34802,68503,1,0),
+(34929,43671,1,0),
+(34935,43671,1,0),
+(34944,68458,1,0),
+(35069,66245,1,0),
+(35069,46598,1,0), -- accessorys
+(35273,68503,1,0),
+(35413,66245,1,0),
+(35415,66245,1,0),
+(35417,66245,1,0),
+(35419,68503,1,0),
+(35421,68503,1,0),
+(35429,68458,1,0),
+(35431,66245,1,0),
+(35431,46598,1,0), -- accessorys
+(35433,66245,1,0),
+(35433,46598,1,0), -- accessorys
+(35436,66245,1,0),
+(36355,66245,1,0),
+(36356,66245,1,0),
+(36357,66245,1,0),
+(36358,66245,1,0);
 
-DELETE FROM `spell_script_names` WHERE `spell_id` IN (28169,28158,54362,30914,38462);
-INSERT INTO `spell_script_names` (`spell_id`, `ScriptName`) VALUES
-(28169,'spell_grobbulus_mutating_injection'),
-(28158,'spell_grobbulus_poison_cloud'),
-(54362,'spell_grobbulus_poison_cloud'),
-(30914,'spell_broggok_poison_cloud'),
-(38462,'spell_broggok_poison_cloud');
-
-DELETE FROM `spell_linked_spell` WHERE `spell_trigger`=-28169;
--- Delete dubble spawns
-DELETE FROM `creature` WHERE `guid` IN (142975, 142976, 142977, 142978, 142979, 142980, 142981, 142982, 142983, 142984, 142985, 142986);
-UPDATE `creature_template` SET `ainame`='SmartAI',`ScriptName`='' WHERE `entry` IN(915,916,918,1234,1411,2122,2130,3155,3170,3327,3328,3594,3599,4163,4214,4215,4582,4583,4584,4794,5165,5166,5167,6707,13283,15285,16279,16684,16685,16686);
-DELETE FROM `smart_scripts` WHERE `entryorguid`IN(915,916,918,1234,1411,2122,2130,3155,3170,3327,3328,3594,3599,4163,4214,4215,4582,4583,4584,4794,5165,5166,5167,6707,13283,15285,16279,16684,16685,16686) AND `source_type`=0;
-
-DELETE FROM `smart_scripts` WHERE `entryorguid`=7166;
-INSERT INTO `smart_scripts` (`entryorguid`,`source_type`,`id`,`link`,`event_type`,`event_phase_mask`,`event_chance`,`event_flags`,`event_param1`,`event_param2`,`event_param3`,`event_param4`,`action_type`,`action_param1`,`action_param2`,`action_param3`,`action_param4`,`action_param5`,`action_param6`,`target_type`,`target_param1`,`target_param2`,`target_param3`,`target_x`,`target_y`,`target_z`,`target_o`,`COMMENT`) VALUES
-(5167,0,0,1,62,0,100,0,4561,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Fenthwick - On Gossip Select - Close gossip'),
-(5167,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Fenthwick - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(4163,0,0,1,62,0,100,0,4576,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Syurna - On Gossip Select - Close gossip'),
-(4163,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Syurna - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(4583,0,0,1,62,0,100,0,4540,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Miles Dexter - On Gossip Select - Close gossip'),
-(4583,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Miles Dexter - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(3328,0,0,1,62,0,100,0,4512,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Ormok - On Gossip Select - Close gossip'),
-(3328,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Ormok - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(5165,0,0,1,62,0,100,0,411,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Hulfdan Blackbeard - On Gossip Select - Close gossip'),
-(5165,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Hulfdan Blackbeard - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(13283,0,0,1,62,0,100,0,5061,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Lord Tony Romano - On Gossip Select - Close gossip'),
-(13283,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Lord Tony Romano - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(918,0,0,1,62,0,100,0,4502,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Osborne the Night Man - On Gossip Select - Close gossip'),
-(918,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Osborne the Night Man - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(16684,0,0,1,62,0,100,0,6650,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Zelanis - On Gossip Select - Close gossip'),
-(16684,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Zelanis - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(915,0,0,1,62,0,100,0,4659,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Jorik Kerridan - On Gossip Select - Close gossip'),
-(915,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Jorik Kerridan - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(916,0,0,1,62,0,100,0,4676,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Solm Hargrin - On Gossip Select - Close gossip'),
-(916,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Solm Hargrin - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(1234,0,0,1,62,0,100,0,411,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Hogral Bakkan - On Gossip Select - Close gossip'),
-(1234,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Hogral Bakkan - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(1411,0,0,1,62,0,100,0,4658,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Ian Strom - On Gossip Select - Close gossip'),
-(1411,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Ian Strom - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(2122,0,0,1,62,0,100,0,85,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'David Trias - On Gossip Select - Close gossip'),
-(2122,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'David Trias - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(2130,0,0,1,62,0,100,0,85,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Marion Call - On Gossip Select - Close gossip'),
-(2130,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Marion Call - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(3155,0,0,1,62,0,100,0,141,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Rwag - On Gossip Select - Close gossip'),
-(3155,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Rwag - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(3170,0,0,1,62,0,100,0,141,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Kaplak - On Gossip Select - Close gossip'),
-(3170,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Kaplak - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(3327,0,0,1,62,0,100,0,4513,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Gest - On Gossip Select - Close gossip'),
-(3327,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Gest - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(3594,0,0,1,62,0,100,0,4690,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Frahun Shadewhisper - On Gossip Select - Close gossip'),
-(3594,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Frahun Shadewhisper - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(3599,0,0,1,62,0,100,0,436,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Jannok Breezesong - On Gossip Select - Close gossip'),
-(3599,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Jannok Breezesong - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(4214,0,0,1,62,0,100,0,4577,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Erion Shadewhisper - On Gossip Select - Close gossip'),
-(4214,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Erion Shadewhisper - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(4215,0,0,1,62,0,100,0,4575,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Anishar - On Gossip Select - Close gossip'),
-(4215,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Anishar - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(4582,0,0,1,62,0,100,0,4542,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Carolyn Ward - On Gossip Select - Close gossip'),
-(4582,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Carolyn Ward - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(4584,0,0,1,62,0,100,0,4541,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Gregory Charles - On Gossip Select - Close gossip'),
-(4584,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Gregory Charles - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(4794,0,0,1,62,0,100,0,4576,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Morgan Stern - On Gossip Select - Close gossip'),
-(4794,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Morgan Stern - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(5166,0,0,1,62,0,100,0,4562,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Ormyr Flinteye - On Gossip Select - Close gossip'),
-(5166,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Ormyr Flinteye - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(6707,0,0,1,62,0,100,0,3984,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Fahrad - On Gossip Select - Close gossip'),
-(6707,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Fahrad - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(15285,0,0,1,62,0,100,0,6650,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Pathstalker Kariel - On Gossip Select - Close gossip'),
-(15285,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Pathstalker Kariel - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(16279,0,0,1,62,0,100,0,6650,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Tannaria - On Gossip Select - Close gossip'),
-(16279,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Tannaria - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(16685,0,0,1,62,0,100,0,6650,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Elara - On Gossip Select - Close gossip'),
-(16685,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Elara - Linked with Previous Event - Cast Conjure Elegant Letter'),
-(16686,0,0,1,62,0,100,0,6650,4,0,0,72,0,0,0,0,0,0,7,0,0,0,0,0,0,0,'Nerisen - On Gossip Select - Close gossip'),
-(16686,0,1,0,61,0,100,0,0,0,0,0,11,21100,0,0,0,0,0,7,0,0,0,0,0,0,0,'Nerisen - Linked with Previous Event - Cast Conjure Elegant Letter');
-
-DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=15 AND `SourceGroup`IN(85,4562,4575,4576,4577,4658,4659,4676,4690,5061,4561,4542,4541,141,410,411,436,3984,4502,4512,4513,4540,6650) AND `SourceEntry`=4;
-
+DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=18 AND `SourceGroup` IN (34776,35069,35431,35433);
 INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES
-(15, 85, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 85, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 85, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 85, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 85, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 85, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4562, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4562, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4562, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4562, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4562, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4562, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4575, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4575, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4575, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4575, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4575, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4575, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4576, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4576, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4576, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4576, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4576, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4576, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4577, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4577, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4577, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4577, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4577, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4577, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4658, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4658, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4658, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4658, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4658, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4658, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4659, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4659, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4659, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4659, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4659, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4659, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4676, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4676, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4676, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4676, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4676, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4676, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4690, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4690, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4690, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4690, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4690, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4690, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 5061, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 5061, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 5061, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 5061, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 5061, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 5061, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4561, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4561, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4561, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4561, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4561, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4561, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4541, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4541, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4541, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4541, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4541, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4541, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4542, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4542, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4542, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4542, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4542, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4542, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 141, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 141, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 141, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 141, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 141, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 141, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 410, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 410, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 410, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 410, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 410, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 410, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 411, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 411, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 411, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 411, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 411, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 411, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 436, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 436, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 436, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 436, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 436, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 436, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 3984, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 3984, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 3984, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 3984, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 3984, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 3984, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4502, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4502, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4502, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4502, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4502, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4502, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4512, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4512, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4512, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4512, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4512, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4512, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4513, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4513, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4513, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4513, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4513, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4513, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 4540, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 4540, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 4540, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 4540, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 4540, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 4540, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete'),
-(15, 6650, 4, 0, 0, 15, 0, 8, 0, 0, 0, 0, 0, '', 'Show gossip option if player is a rogue'),
-(15, 6650, 4, 0, 0, 27, 0, 24, 3, 0, 0, 0, 0, '', 'Show gossip option if player is at least level 24'),
-(15, 6650, 4, 0, 0, 2, 0, 17126, 1, 0, 1, 0, 0, '', 'Show gossip option if player does not have Elegant Letter'),
-(15, 6650, 4, 0, 0, 8, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player is not rewarded for quest 6681'),
-(15, 6650, 4, 0, 0, 9, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 taken'),
-(15, 6650, 4, 0, 0, 28, 0, 6681, 0, 0, 1, 0, 0, '', 'Show gossip option if player does not have quest 6681 complete');
+(18,34776,66245,0,0,31,0,4,0,0,0,0,0,'','Require player for spellclick'),
+(18,34776,46598,0,0,31,0,3,0,0,0,0,0,'','Require unit for spellclick'),
+(18,35069,66245,0,0,31,0,4,0,0,0,0,0,'','Require player for spellclick'),
+(18,35069,46598,0,0,31,0,3,0,0,0,0,0,'','Require unit for spellclick'),
+(18,35431,66245,0,0,31,0,4,0,0,0,0,0,'','Require player for spellclick'),
+(18,35431,46598,0,0,31,0,3,0,0,0,0,0,'','Require unit for spellclick'),
+(18,35433,66245,0,0,31,0,4,0,0,0,0,0,'','Require player for spellclick'),
+(18,35433,46598,0,0,31,0,3,0,0,0,0,0,'','Require unit for spellclick');
+
+UPDATE `gameobject_template` SET `flags`=40 WHERE `entry` IN (195121,195276);
+
+
+UPDATE `creature_template` SET `faction_A`=1732, `faction_H`=1732 WHERE `entry`=28312; -- Wintergrasp Siege Engine (A)
+UPDATE `creature_template` SET `faction_A`=1735, `faction_H`=1735 WHERE `entry`=32627; -- Wintergrasp Siege Engine (H)
+UPDATE `creature_template` SET `faction_A`=1732, `faction_H`=1732 WHERE `entry`=28319; -- Wintergrasp Siege Turret (A)
+UPDATE `creature_template` SET `faction_A`=1735, `faction_H`=1735 WHERE `entry`=32629; -- Wintergrasp Siege Turret (H)
+
+DELETE FROM `npc_spellclick_spells` WHERE `npc_entry` IN (28312,32627,28319,32629);
+INSERT INTO `npc_spellclick_spells` (`npc_entry`, `spell_id`, `cast_flags`, `user_type`) VALUES
+(28312,60968,1,0),
+(28312,46598,1,0), -- accessorys
+(32627,60968,1,0),
+(32627,46598,1,0), -- accessorys
+(28319,60968,1,0),
+(32629,60968,1,0);
+
+DELETE FROM `conditions` WHERE `SourceTypeOrReferenceId`=18 AND `SourceGroup` IN (28312,32627,28319,32629);
+INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `ScriptName`, `Comment`) VALUES
+(18,28312,60968,0,0,31,0,4,0,0,0,0,0,'','Require player for spellclick'),
+(18,28312,46598,0,0,31,0,3,0,0,0,0,0,'','Require unit for spellclick'),
+(18,32627,60968,0,0,31,0,4,0,0,0,0,0,'','Require player for spellclick'),
+(18,32627,46598,0,0,31,0,3,0,0,0,0,0,'','Require unit for spellclick');
+
+
+UPDATE `creature_template` SET `faction_A`=71, `faction_H`=71, `unit_flags`=32768, `baseattacktime`=2000, `rangeattacktime`=2000 WHERE `entry`=5624; -- Undercity Guardian
+UPDATE `creature_template` SET `faction_A`=14, `faction_H`=14 WHERE `entry`=25422; -- Mystical Webbing
+UPDATE `creature_template` SET `faction_A`=2148, `faction_H`=2148 WHERE `entry`=27189; -- Unu'pe Spearman
+DELETE FROM trinity_string where entry in (11002, 11003, 11004, 11005, 11006, 11007);
+INSERT INTO `trinity_string` VALUES
+('11002', 'Server: %s has kicked %s, reason: %s', '', '', '', '', '', '', '', ''),
+('11003', 'Server: %s has muted %s for %u minutes, reason: %s', '', '', '', '', '', '', '', ''),
+('11004', 'Server: %s has banned character %s for %s, reason: %s', '', '', '', '', '', '', '', ''),
+('11005', 'Server: %s has banned character %s permanetly, reason: %s', '', '', '', '', '', '', '', ''),
+('11006', 'Server: %s has banned %s for %s, reason: %s', '', '', '', '', '', '', '', ''),
+('11007', 'Server: %s has banned %s permanetly, reason: %s', '', '', '', '', '', '', '', '');
+UPDATE `smart_scripts` SET `action_param1`=61752, `target_type`=7, `target_param1`=0, `comment`='Illidan Stormrage - On Just Died - Invoker Cast \'Illidan Kill Credit Master\'' WHERE `entryorguid`=32588 AND `source_type`=0 AND `id`=5;
+
+DELETE FROM `spell_script_names` WHERE `spell_id`=61752;
+INSERT INTO `spell_script_names` (`spell_id`, `ScriptName`) VALUES
+(61752, 'spell_q13400_illidan_kill_master');
+SET @id = 777;
+
+DELETE FROM `command` WHERE `name` = 'mailbox';
+INSERT INTO `command` (`name`, `permission`, `help`) VALUES
+('mailbox', @id, 'Syntax: .mailbox\r\n\r\nShow your mailbox content.');
+UPDATE `command` SET `permission`=777 WHERE `name`='mailbox';
+-- Fix Saronite Mine Slave so these actually despawn when gossip option selected for quest credit
+UPDATE `smart_scripts` SET `target_type`=1 WHERE  `entryorguid`=3139700 AND `source_type`=9 AND `id`=3 AND `link`=0;
+-- Fix Aludane Whitecloud spawing adds on bandage
+DELETE FROM `smart_scripts` WHERE `entryorguid`=28674;
+UPDATE `creature_template` SET `InhabitType`=5 WHERE `entry` IN (11368,14965);
+-- Fix Karuk quests - Remove Karuk's Oath as NextQuestId in A Diplomatic Mission, as this blocks Horde from doing Karuk's Oath after turning in Seek Out Karuk!
+UPDATE quest_template SET NextQuestId=0 WHERE Id=12141;
+--
+DELETE FROM `conditions` WHERE `SourceEntry` = 40817;
+INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry`, `SourceId`, `ElseGroup`, `ConditionTypeOrReference`, `ConditionTarget`, `ConditionValue1`, `ConditionValue2`, `ConditionValue3`, `NegativeCondition`, `ErrorType`, `ErrorTextId`, `Comment`) VALUES
+(17,0,40817,0,0,23,0,3785,0,0,0,0,0,'Banishing Crystal requires Forge Camp: Wrath'),
+(17,0,40817,0,1,23,0,3784,0,0,0,0,0,'Banishing Crystal requires Forge Camp: Terror');
+--
+UPDATE `smart_scripts` SET `event_phase_mask`=1 WHERE  `entryorguid`=2103 AND `event_phase_mask`=2;
+--
+UPDATE `conditions` SET `ElseGroup`=1 WHERE  `SourceTypeOrReferenceId`=15 AND `SourceGroup`=3186 AND `SourceEntry`=0 AND `SourceId`=0 AND `ElseGroup`=0 AND `ConditionTypeOrReference`=5 AND `ConditionTarget`=0 AND `ConditionValue1`=54 AND `ConditionValue2`=128 AND `ConditionValue3`=0;
+UPDATE `conditions` SET `ConditionValue1`=64 WHERE  `SourceTypeOrReferenceId`=15 AND `SourceGroup`=3186 AND `SourceEntry`=0 AND `SourceId`=0 AND `ElseGroup`=0 AND `ConditionTypeOrReference`=16 AND `ConditionTarget`=0 AND `ConditionValue1`=8 AND `ConditionValue2`=0 AND `ConditionValue3`=0;
+-- Boxi (brewfest)
+SET @GUID := '200002';
+
+-- game event creature boxi
+DELETE FROM `game_event_creature` WHERE `guid`=@GUID;
+INSERT INTO `game_event_creature`(`eventEntry`,`guid`) values (24,@GUID);
+--
+UPDATE `creature_template` SET `flags_extra`=`flags_extra`|128|2  WHERE `entry` IN (31138,31550);
+-- Update creature (Voidspawner L) force to use modelid 18684
+UPDATE `creature` SET `modelid`=18684 WHERE `guid` IN (70169, 70170, 70171, 70172, 70173, 70174);
+-- Update creature (Voidspawner XL) force to use modelid 18685
+UPDATE `creature` SET `modelid`=18685 WHERE `guid` IN (68919, 68918, 68917, 68920, 68921);
+-- Living Ruby Pendant (item 24110) shouldn't get SP bonuses
+DELETE FROM `spell_bonus_data` WHERE `entry`=31024;
+INSERT INTO `spell_bonus_data` (`entry`, `direct_bonus`, `dot_bonus`, `ap_bonus`, `ap_dot_bonus`, `comments`) VALUES (31024,0,0,0,0,'Living ruby pendant should not get bonuses');
+--
+DELETE FROM `game_graveyard_zone` WHERE `id`=589;
+INSERT INTO `game_graveyard_zone` (`id`, `ghost_zone`, `faction`) VALUES
+(589, 876, 0);
+--
+DELETE FROM `npc_trainer` WHERE `entry`=201009 AND `spell`=63746;
+INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES 
+(201009, 63746, 5000, 333, 225, 0);
+-- Delete mote of earth from loot of Icetouched Earthrager
+DELETE FROM `creature_loot_template` WHERE  `entry`=29436 AND `item`=22573;
+-- Rubble Stalker Kologarn
+UPDATE `creature_template` SET `flags_extra`=`flags_extra`|128 WHERE `entry`=33809;
+-- The Torch of Retribution (3454)
+SET @KALARAN := 8479; -- Kalaran Windblade
+SET @QUEST   := 3454; -- Quest: The Torch of Retribution
+
+DELETE FROM `smart_scripts` WHERE `entryorguid`=@KALARAN AND `id` IN (5,6);
+INSERT INTO `smart_scripts` (`entryorguid`, `source_type`, `id`, `link`, `event_type`, `event_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action_type`, `action_param1`, `action_param2`, `action_param3`, `action_param4`, `action_param5`, `action_param6`, `target_type`, `target_param1`, `target_param2`, `target_param3`, `target_x`, `target_y`, `target_z`, `target_o`, `comment`) VALUES
+(@KALARAN,0,5,6,19,0,100,0,@QUEST,0,0,0,70,0,0,0,0,0,0,14,24166,149410,0,0,0,0,0,"Kalaran Windblade - On Quest Accept (4354) - Respawn Light of Retribution"),
+(@KALARAN,0,6,0,61,0,100,0,0,0,0,0,70,0,0,0,0,0,0,14,16762,149047,0,0,0,0,0,"Kalaran Windblade - Linked with Previous Event - Respawn Torch of Retribution");
+UPDATE `creature_template` SET `ScriptName`='boss_prince_taldaram' WHERE `entry`=29308;
+
+UPDATE `creature_template` SET `scale`=1, `speed_walk`=2, `InhabitType`=4, `flags_extra`=128 WHERE `entry` IN (30106,31458,31686,31687);
+UPDATE `creature_template` SET `ScriptName`='npc_prince_taldaram_flame_sphere' WHERE `entry` IN (30106,31686,31687);
+
+UPDATE `gameobject_template` SET `flags`=32, `ScriptName`='go_prince_taldaram_sphere' WHERE `entry` IN (193093,193094);
+
+DELETE FROM `spell_script_names` WHERE `spell_id` IN (55931, 55895, 59511, 59512);
+INSERT INTO `spell_script_names` (`spell_id` ,`ScriptName`) VALUES
+(55931, 'spell_prince_taldaram_conjure_flame_sphere'),
+(55895, 'spell_prince_taldaram_flame_sphere_summon'),
+(59511, 'spell_prince_taldaram_flame_sphere_summon'),
+(59512, 'spell_prince_taldaram_flame_sphere_summon');
+--
+UPDATE `creature_template` SET `faction_A`=64, `faction_H`=64 WHERE `entry` IN (39675, 39368, 39386, 39678, 39396, 39275, 39349);
+UPDATE `creature_template` SET `faction_A`=875, `faction_H`=875 WHERE `entry` IN (39717, 39716, 39715);
+UPDATE `creature_template` SET `faction_A`=59, `faction_H`=59 WHERE `entry`=1117;
+DELETE FROM `spell_script_names` WHERE `spell_id`=51690;
+INSERT INTO `spell_script_names` (`spell_id` ,`ScriptName`) VALUES
+(51690, 'spell_rog_killing_spree');
