@@ -99,7 +99,11 @@ const char *CONF_mpq_list[]={
     "patch-2.MPQ",
     "patch-3.MPQ",
     "patch-4.MPQ",
-    "patch-5.MPQ",
+	"patch-5.MPQ",
+	"patch-6.MPQ",
+	"patch-7.MPQ",
+	"patch-8.MPQ",
+	"patch-9.MPQ",
 };
 
 static const char* const langs[] = {"enGB", "enUS", "deDE", "esES", "frFR", "koKR", "zhCN", "zhTW", "enCN", "enTW", "esMX", "ruRU" };
@@ -1069,7 +1073,7 @@ void LoadLocaleMPQFiles(int const locale)
     sprintf(filename,"%s/Data/%s/locale-%s.MPQ", input_path, langs[locale], langs[locale]);
     new MPQArchive(filename);
 
-    for(int i = 1; i < 5; ++i)
+    for(int i = 1; i < 10; ++i)
     {
         char ext[3] = "";
         if(i > 1)
