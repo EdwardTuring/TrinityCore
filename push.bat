@@ -1,1 +1,1 @@
-git push https://github.com/EdwardTuring/TrinityCore
+git push -f https://github.com/EdwardTuring/TrinityCore

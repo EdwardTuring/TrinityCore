@@ -149,6 +149,7 @@ struct CreatureOutfit
 {
     uint8 race;
     uint8 gender;
+	uint8 tclass;
     uint8 face;
     uint8 skin;
     uint8 hair;

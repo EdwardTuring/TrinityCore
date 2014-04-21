@@ -7800,9 +7800,9 @@ void ObjectMgr::LoadCreatureOutfits()
 
     _creatureOutfitStore.clear();                           // for reload case (test only)
 
-    //                                                 0     1      2      3     4     5       6           7
-    QueryResult result = WorldDatabase.Query("SELECT entry, race, gender, skin, face, hair, haircolor, facialhair, "
-        //8       9        10    11     12     13    14     15     16     17     18
+    //                                                                                   0        1         2        3        4       5       6           7              8
+    QueryResult result = WorldDatabase.Query("SELECT entry, race, gender,class, skin, face, hair, haircolor, facialhair, "
+        //  9        10           11       12      13      14     15     16         17      18        20
         "head, shoulders, body, chest, waist, legs, feet, wrists, hands, back, tabard FROM creature_template_outfits");
 
     if (!result)
@@ -7848,6 +7848,9 @@ void ObjectMgr::LoadCreatureOutfits()
         _creatureTemplateStore[entry].Modelid3 = 0;
         _creatureTemplateStore[entry].Modelid4 = 0;
         _creatureTemplateStore[entry].unit_flags2 |= UNIT_FLAG2_MIRROR_IMAGE; // Needed so client requests mirror packet
+
+
+		co.tclass = fields[i++].GetUInt8();
 
         co.skin         = fields[i++].GetUInt8();
         co.face         = fields[i++].GetUInt8();
