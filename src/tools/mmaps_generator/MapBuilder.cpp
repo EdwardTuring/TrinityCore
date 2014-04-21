@@ -29,6 +29,8 @@
 #include "DisableMgr.h"
 #include <ace/OS_NS_unistd.h>
 
+#include <sstream>
+
 uint32 GetLiquidFlags(uint32 /*liquidType*/) { return 0; }
 namespace DisableMgr
 {
@@ -86,17 +88,29 @@ namespace MMAP
     }
 
     /**************************************************************************/
-    void MapBuilder::discoverTiles()
+    
+	//求整数的位数
+	inline static int digit(uint32 n){
+		int i = 0;
+		if (n == 0)return 1;
+		while (n>0){
+			n = n / 10;
+			i++;
+		}
+		return i;
+	}
+	
+	void MapBuilder::discoverTiles()
     {
         std::vector<std::string> files;
         uint32 mapID, tileX, tileY, tileID, count = 0;
-        char filter[12];
+        char filter[40];
 
         printf("Discovering maps... ");
         getDirContents(files, "maps");
         for (uint32 i = 0; i < files.size(); ++i)
         {
-            mapID = uint32(atoi(files[i].substr(0,3).c_str()));
+			mapID = uint32(atoi(files[i].substr(0, files[i].size() - 8).c_str()));
             if (m_tiles.find(mapID) == m_tiles.end())
             {
                 m_tiles.insert(std::pair<uint32, std::set<uint32>*>(mapID, new std::set<uint32>));
@@ -108,7 +122,7 @@ namespace MMAP
         getDirContents(files, "vmaps", "*.vmtree");
         for (uint32 i = 0; i < files.size(); ++i)
         {
-            mapID = uint32(atoi(files[i].substr(0,3).c_str()));
+			mapID = uint32(atoi(files[i].substr(0, files[i].size() - 7).c_str()));
             m_tiles.insert(std::pair<uint32, std::set<uint32>*>(mapID, new std::set<uint32>));
             count++;
         }
@@ -120,27 +134,42 @@ namespace MMAP
         {
             std::set<uint32>* tiles = (*itr).second;
             mapID = (*itr).first;
+			std::stringstream ss;
+			int t = digit(mapID) > 3 ? digit(mapID) : 3;
 
-            sprintf(filter, "%03u*.vmtile", mapID);
+			ss<<"%0"<< t << "u*.vmtile";
+
+            sprintf(filter,ss.str().c_str(), mapID);
+
             files.clear();
+
             getDirContents(files, "vmaps", filter);
             for (uint32 i = 0; i < files.size(); ++i)
             {
-                tileX = uint32(atoi(files[i].substr(7,2).c_str()));
-                tileY = uint32(atoi(files[i].substr(4,2).c_str()));
+				tileX = uint32(atoi(files[i].substr(files[i].size() - 12, 2).c_str()));
+
+				tileY = uint32(atoi(files[i].substr(files[i].size() - 9, 2).c_str()));
+				printf("%s,%s ,%s\n", files[i].c_str(), files[i].substr(files[i].size() - 12, 2).c_str(), files[i].substr(files[i].size() - 9, 2).c_str());
+
                 tileID = StaticMapTree::packTileID(tileY, tileX);
 
                 tiles->insert(tileID);
                 count++;
             }
+			std::stringstream ss1;
+			ss1 << "%0" << t << "u*";
 
-            sprintf(filter, "%03u*", mapID);
+			sprintf(filter, ss1.str().c_str(), mapID);
+
             files.clear();
             getDirContents(files, "maps", filter);
             for (uint32 i = 0; i < files.size(); ++i)
             {
-                tileY = uint32(atoi(files[i].substr(3,2).c_str()));
-                tileX = uint32(atoi(files[i].substr(5,2).c_str()));
+				tileY = uint32(atoi(files[i].substr(files[i].size() - 8, 2).c_str()));
+				
+
+				tileX = uint32(atoi(files[i].substr(files[i].size() - 6, 2).c_str()));
+				printf("%s,%s ,%s\n", files[i].c_str(), files[i].substr(files[i].size() - 8, 2).c_str(), files[i].substr(files[i].size() - 6, 2).c_str());
                 tileID = StaticMapTree::packTileID(tileX, tileY);
 
                 if (tiles->insert(tileID).second)
@@ -341,7 +370,10 @@ namespace MMAP
     void MapBuilder::buildMap(uint32 mapID)
     {
 #ifndef __APPLE__
-        printf("[Thread %u] Building map %03u:\n", uint32(ACE_Thread::self()), mapID);
+		std::stringstream sse;
+		int t = digit(mapID) > 3 ? digit(mapID) : 3;
+		sse << "[Thread %u] Building map %0" << t << "u:\n";
+        printf(sse.str().c_str(), uint32(ACE_Thread::self()), mapID);
 #endif
 
         std::set<uint32>* tiles = getTileList(mapID);
@@ -387,8 +419,10 @@ namespace MMAP
 
             dtFreeNavMesh(navMesh);
         }
-
-        printf("[Map %03i] Complete!\n", mapID);
+	
+		std::stringstream ss;
+		ss << "[Map %0" << t << "i] Complete!\n";
+		printf(ss.str().c_str(), mapID);
     }
 
     /**************************************************************************/
@@ -488,7 +522,10 @@ namespace MMAP
         }
 
         char fileName[25];
-        sprintf(fileName, "mmaps/%03u.mmap", mapID);
+		std::stringstream ssfileName;
+		int t = digit(mapID) > 3 ? digit(mapID) : 3;
+		ssfileName << "mmaps/%0" << t << "u.mmap";
+		sprintf(fileName, ssfileName.str().c_str(), mapID);
 
         FILE* file = fopen(fileName, "wb");
         if (!file)
@@ -511,8 +548,11 @@ namespace MMAP
         dtNavMesh* navMesh)
     {
         // console output
-        char tileString[20];
-        sprintf(tileString, "[Map %03i] [%02i,%02i]: ", mapID, tileX, tileY);
+        char tileString[40];
+		std::stringstream ss;
+		int t = digit(mapID) > 3 ? digit(mapID) : 3;
+		ss << "[Map %0" << t << "i] [%02i,%02i]: ";
+        sprintf(tileString, ss.str().c_str(), mapID, tileX, tileY);
         printf("%s Building movemap tiles...\n", tileString);
 
         IntermediateValues iv;
@@ -806,7 +846,9 @@ namespace MMAP
 
             // file output
             char fileName[255];
-            sprintf(fileName, "mmaps/%03u%02i%02i.mmtile", mapID, tileY, tileX);
+			std::stringstream ss1;
+			ss1 << "mmaps/%0" << t << "u%02i%02i.mmtile";
+            sprintf(fileName, ss1.str().c_str(), mapID, tileY, tileX);
             FILE* file = fopen(fileName, "wb");
             if (!file)
             {
@@ -965,7 +1007,10 @@ namespace MMAP
     bool MapBuilder::shouldSkipTile(uint32 mapID, uint32 tileX, uint32 tileY)
     {
         char fileName[255];
-        sprintf(fileName, "mmaps/%03u%02i%02i.mmtile", mapID, tileY, tileX);
+		std::stringstream ss1;
+		int t = digit(mapID) > 3 ? digit(mapID) : 3;
+		ss1 << "mmaps/%0" << t << "u%02i%02i.mmtile";
+		sprintf(fileName, ss1.str().c_str(), mapID, tileY, tileX);
         FILE* file = fopen(fileName, "rb");
         if (!file)
             return false;
