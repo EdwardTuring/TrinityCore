@@ -1319,7 +1319,7 @@ struct npc_argent_captainAI : public ScriptedAI
                 }
 
                 Talk(SAY_CAPTAIN_RESURRECTED);
-                me->UpdateEntry(newEntry, instance->GetData(DATA_TEAM_IN_INSTANCE), me->GetCreatureData());
+                me->UpdateEntry(newEntry, me->GetCreatureData());
                 DoCast(me, SPELL_UNDEATH, true);
             }
         }
@@ -1980,9 +1980,7 @@ class spell_svalna_revive_champion : public SpellScriptLoader
                 if (!caster)
                     return;
 
-                Position pos;
-                caster->GetPosition(&pos);
-                caster->GetNearPosition(pos, 5.0f, 0.0f);
+                Position pos = caster->GetNearPosition(5.0f, 0.0f);
                 //pos.m_positionZ = caster->GetBaseMap()->GetHeight(caster->GetPhaseMask(), pos.GetPositionX(), pos.GetPositionY(), caster->GetPositionZ(), true, 50.0f);
                 //pos.m_positionZ += 0.05f;
                 caster->SetHomePosition(pos);
