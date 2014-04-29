@@ -16,3 +16,5 @@ CMakeLists.txt.user
 *.BACKUP.*
 *.BASE.*
 *.LOCAL.*
+sql/updates/world/s.sql
+sql/updates/新建文件夹/*
