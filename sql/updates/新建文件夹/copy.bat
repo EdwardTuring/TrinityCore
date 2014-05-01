@@ -1,3 +1,3 @@
-del s.sql
-copy /b *.sql s.sql
-copy /Y s.sql ..\world\s.sql
+del ss.sql
+copy /b *.sql ss.sql
+copy /Y ss.sql ..\world\ss.sql
