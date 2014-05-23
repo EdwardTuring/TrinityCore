@@ -144,6 +144,8 @@ enum CharacterCustomizeFlags
 
 static uint32 copseReclaimDelay[MAX_DEATH_COUNT] = { 30, 60, 120 };
 
+uint32 const MAX_MONEY_AMOUNT = static_cast<uint32>(std::numeric_limits<int32>::max());
+
 // == PlayerTaxi ================================================
 
 PlayerTaxi::PlayerTaxi()
@@ -363,6 +365,12 @@ void TradeData::SetMoney(uint32 money)
 {
     if (m_money == money)
         return;
+
+    if (!m_player->HasEnoughMoney(money))
+    {
+        m_player->GetSession()->SendTradeStatus(TRADE_STATUS_BUSY);
+        return;
+    }
 
     m_money = money;
 
@@ -14439,7 +14447,7 @@ void Player::PrepareGossipMenu(WorldObject* source, uint32 menuId /*= 0*/, bool 
                 strOptionText = itr->second.OptionText;
 
             if (boxBroadcastText)
-                strBoxText = optionBroadcastText->GetText(locale, getGender());
+                strBoxText = boxBroadcastText->GetText(locale, getGender());
             else
                 strBoxText = itr->second.BoxText;
 
@@ -22640,7 +22648,7 @@ bool Player::ModifyMoney(int32 amount, bool sendError /*= true*/)
         SetMoney (GetMoney() > uint32(-amount) ? GetMoney() + amount : 0);
     else
     {
-        if (GetMoney() < uint32(MAX_MONEY_AMOUNT - amount))
+        if (GetMoney() < MAX_MONEY_AMOUNT - static_cast<uint32>(amount))
             SetMoney(GetMoney() + amount);
         else
         {

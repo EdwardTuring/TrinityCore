@@ -483,7 +483,7 @@ public:
         uint64 StomachEnterTarget;
 
         //Stomach map, bool = true then in stomach
-        UNORDERED_MAP<uint64, bool> Stomach_Map;
+        std::unordered_map<uint64, bool> Stomach_Map;
 
         void Reset() override
         {
@@ -536,7 +536,7 @@ public:
             if (Stomach_Map.empty())
                 return NULL;
 
-            UNORDERED_MAP<uint64, bool>::const_iterator i = Stomach_Map.begin();
+            std::unordered_map<uint64, bool>::const_iterator i = Stomach_Map.begin();
 
             std::list<Unit*> temp;
             std::list<Unit*>::const_iterator j;
@@ -545,7 +545,7 @@ public:
             while (i != Stomach_Map.end())
             {
                 //Check for valid player
-                Unit* unit = Unit::GetUnit(*me, i->first);
+                Unit* unit = ObjectAccessor::GetUnit(*me, i->first);
 
                 //Only units out of stomach
                 if (unit && i->second == false)
@@ -640,7 +640,7 @@ public:
                         me->RemoveFlag(UNIT_FIELD_FLAGS, UNIT_FLAG_NOT_SELECTABLE | UNIT_FLAG_NON_ATTACKABLE);
 
                         //Emerging phase
-                        //AttackStart(Unit::GetUnit(*me, HoldpPlayer));
+                        //AttackStart(ObjectAccessor::GetUnit(*me, HoldpPlayer));
                         DoZoneInCombat();
 
                         //Place all units in threat list on outside of stomach
@@ -680,13 +680,13 @@ public:
 
                         DoCast(me, SPELL_PURPLE_COLORATION, true);
 
-                        UNORDERED_MAP<uint64, bool>::iterator i = Stomach_Map.begin();
+                        std::unordered_map<uint64, bool>::iterator i = Stomach_Map.begin();
 
                         //Kick all players out of stomach
                         while (i != Stomach_Map.end())
                         {
                             //Check for valid player
-                            Unit* unit = Unit::GetUnit(*me, i->first);
+                            Unit* unit = ObjectAccessor::GetUnit(*me, i->first);
 
                             //Only move units in stomach
                             if (unit && i->second == true)
@@ -712,12 +712,12 @@ public:
                     if (StomachAcidTimer <= diff)
                     {
                         //Apply aura to all players in stomach
-                        UNORDERED_MAP<uint64, bool>::iterator i = Stomach_Map.begin();
+                        std::unordered_map<uint64, bool>::iterator i = Stomach_Map.begin();
 
                         while (i != Stomach_Map.end())
                         {
                             //Check for valid player
-                            Unit* unit = Unit::GetUnit(*me, i->first);
+                            Unit* unit = ObjectAccessor::GetUnit(*me, i->first);
 
                             //Only apply to units in stomach
                             if (unit && i->second == true)
@@ -767,7 +767,7 @@ public:
                         if (StomachEnterVisTimer <= diff)
                         {
                             //Check for valid player
-                            Unit* unit = Unit::GetUnit(*me, StomachEnterTarget);
+                            Unit* unit = ObjectAccessor::GetUnit(*me, StomachEnterTarget);
 
                             if (unit)
                             {
@@ -917,7 +917,7 @@ public:
 
         void JustDied(Unit* /*killer*/) override
         {
-            if (Unit* p = Unit::GetUnit(*me, Portal))
+            if (Unit* p = ObjectAccessor::GetUnit(*me, Portal))
                 p->Kill(p);
         }
 
@@ -998,7 +998,7 @@ public:
 
         void JustDied(Unit* /*killer*/) override
         {
-            if (Unit* p = Unit::GetUnit(*me, Portal))
+            if (Unit* p = ObjectAccessor::GetUnit(*me, Portal))
                 p->Kill(p);
         }
 
@@ -1026,7 +1026,7 @@ public:
             {
                 if (EvadeTimer <= diff)
                 {
-                    if (Unit* p = Unit::GetUnit(*me, Portal))
+                    if (Unit* p = ObjectAccessor::GetUnit(*me, Portal))
                         p->Kill(p);
 
                     //Dissapear and reappear at new position
@@ -1115,7 +1115,7 @@ public:
 
         void JustDied(Unit* /*killer*/) override
         {
-            if (Unit* p = Unit::GetUnit(*me, Portal))
+            if (Unit* p = ObjectAccessor::GetUnit(*me, Portal))
                 p->Kill(p);
         }
 
@@ -1144,7 +1144,7 @@ public:
             {
                 if (EvadeTimer <= diff)
                 {
-                    if (Unit* p = Unit::GetUnit(*me, Portal))
+                    if (Unit* p = ObjectAccessor::GetUnit(*me, Portal))
                         p->Kill(p);
 
                     //Dissapear and reappear at new position
@@ -1234,7 +1234,7 @@ public:
 
         void JustDied(Unit* /*killer*/) override
         {
-            if (Unit* p = Unit::GetUnit(*me, Portal))
+            if (Unit* p = ObjectAccessor::GetUnit(*me, Portal))
                 p->Kill(p);
         }
 
