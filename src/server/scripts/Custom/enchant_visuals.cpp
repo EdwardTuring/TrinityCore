@@ -18,8 +18,8 @@ This script is 100% automatic. Just add it to your source.
 
 static const uint32 ItemEnchants[] = {3789, 3854, 3273, 3225, 3870, 1899, 2674, 2675, 2671, 2672, 3365, 2673, 2343, 425, 3855, 1894, 1103, 1898, 3345, 1743, 3093, 1900, 3846, 1606, 283, 1, 3265, 2, 3, 3266, 1903, 13, 26, 7, 803, 1896, 2666, 25};
 static const uint32 ItemEnchants_size = sizeof(ItemEnchants)/sizeof(*ItemEnchants);
-typedef UNORDERED_MAP<uint32, uint32> EnchantStoreType;
-typedef UNORDERED_MAP<uint32, EnchantStoreType> ItemStoreType;
+typedef std::unordered_map<uint32, uint32> EnchantStoreType;
+typedef std::unordered_map<uint32, EnchantStoreType> ItemStoreType;
 static ItemStoreType ItemStore;
 
 uint32 GetItemEnchantVisual(Player* player, Item* item)
