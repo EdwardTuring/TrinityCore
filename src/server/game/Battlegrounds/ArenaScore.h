@@ -23,16 +23,12 @@
 
 struct ArenaScore : public BattlegroundScore
 {
-    friend class BattlegroundBE;
-    friend class BattlegroundDS;
-    friend class BattlegroundNA;
-    friend class BattlegroundRL;
-    friend class BattlegroundRV;
+    friend class Arena;
 
     protected:
-        ArenaScore(uint64 playerGuid, uint32 team) : BattlegroundScore(playerGuid), TeamId(team == ALLIANCE ? 1 : 0) { }
+        ArenaScore(uint64 playerGuid, uint32 team) : BattlegroundScore(playerGuid), TeamId(team == ALLIANCE ? BG_TEAM_ALLIANCE : BG_TEAM_HORDE) { }
 
-        void AppendToPacket(WorldPacket& data) final
+        void AppendToPacket(WorldPacket& data) final override
         {
             data << uint64(PlayerGuid);
 
@@ -40,6 +36,12 @@ struct ArenaScore : public BattlegroundScore
             data << uint8(TeamId);
             data << uint32(DamageDone);
             data << uint32(HealingDone);
+
+            BuildObjectivesBlock(data);
+        }
+
+        void BuildObjectivesBlock(WorldPacket& data) final override
+        {
             data << uint32(0); // Objectives Count
         }
 
@@ -51,17 +53,25 @@ struct ArenaScore : public BattlegroundScore
             return stream.str();
         }
 
-        uint8 TeamId; // TEAM_ALLIANCE or TEAM_HORDE
+        uint8 TeamId; // BattlegroundTeamId
 };
 
 struct ArenaTeamScore
 {
+    friend class Arena;
     friend class Battleground;
 
     protected:
         ArenaTeamScore() : RatingChange(0), MatchmakerRating(0) { }
 
         virtual ~ArenaTeamScore() { }
+
+        void Reset()
+        {
+            RatingChange = 0;
+            MatchmakerRating = 0;
+            TeamName.clear();
+        }
 
         void Assign(int32 ratingChange, uint32 matchMakerRating, std::string const& teamName)
         {
@@ -75,6 +85,7 @@ struct ArenaTeamScore
             uint32 ratingLost = std::abs(std::min(RatingChange, 0));
             uint32 ratingWon = std::max(RatingChange, 0);
 
+            // should be old rating, new rating, and client will calculate rating change itself
             data << uint32(ratingLost);
             data << uint32(ratingWon);
             data << uint32(MatchmakerRating);
